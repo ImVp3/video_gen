@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "version": "1.0.1",
+    "canvas": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "aspect": "16:9"
+    },
+    "safe_margins": {
+      "title_area": 0.06,
+      "action_area": 0.035
+    },
+    "project_name": "E-learning Layout Clean",
+    "generated_at": "2025-08-13T03:25:00Z"
+  },
+  "timeline": [
+    {
+      "id": "scene_01_title_card",
+      "type": "title_card",
+      "start": 0.0,
+      "duration": 3.0,
+      "background": {
+        "color": "#0d1117"
+      },
+      "slots": [
+        {
+          "slot_id": "course_title",
+          "layout": {
+            "rect": [96, 160, 1200, 160],
+            "align": "left"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 72,
+            "weight": 800,
+            "color": "#ffffff"
+          },
+          "layer": 10,
+          "text": "Python cho E-Learning: Tư duy hệ thống & MoviePy v2",
+          "motion": {
+            "enter": { "type": "slide-up", "dur": 0.4 }
+          }
+        },
+        {
+          "slot_id": "subtitle",
+          "layout": {
+            "rect": [96, 340, 1180, 100],
+            "align": "left"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 40,
+            "weight": 700,
+            "color": "#9aa4b2"
+          },
+          "layer": 10,
+          "text": "Xây dựng pipeline đa tác tử cho tạo video tự động",
+          "motion": {
+            "enter": { "type": "fade", "dur": 0.25 }
+          }
+        },
+        {
+          "slot_id": "progress_ui",
+          "layout": {
+            "rect": [1464, 96, 360, 80],
+            "align": "right"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 24,
+            "weight": 700,
+            "color": "#ffffff"
+          },
+          "layer": 20,
+          "text": "Tiến độ 3/12 (25%)"
+        },
+        {
+          "slot_id": "timestamp",
+          "layout": {
+            "rect": [1624, 992, 200, 40],
+            "align": "right"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 20,
+            "weight": 700,
+            "color": "#ffffff"
+          },
+          "layer": 20,
+          "text": "00:00:00"
+        },
+        {
+          "slot_id": "captions",
+          "layout": {
+            "rect": [260, 932, 1400, 100],
+            "align": "center"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "weight": 700,
+            "color": "#ffffff",
+            "bg_color": "rgba(0,0,0,0.55)"
+          },
+          "layer": 20,
+          "text": ""
+        }
+      ],
+      "presenter": {
+        "src": "D:/ThienPV/code/demo/assets/presenterv1.mp4",
+        "shape": "circle",
+        "rect": [1480, 720, 320, 320],
+        "layer": 20
+      },
+      "transition_out": {
+        "type": "dissolve",
+        "dur": 0.3
+      }
+    },
+    {
+      "id": "scene_02_lecture_right_graphic",
+      "type": "lecture_side",
+      "start": 3.0,
+      "duration": 8.0,
+      "background": {
+        "color": "#0d1117"
+      },
+      "slots": [
+        {
+          "slot_id": "heading_h1",
+          "layout": {
+            "rect": [96, 160, 1100, 140],
+            "align": "left"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 56,
+            "weight": 800,
+            "color": "#ffffff"
+          },
+          "layer": 10,
+          "text": "Kiến trúc tổng thể hệ thống",
+          "motion": {
+            "enter": { "type": "slide-up", "dur": 0.4 }
+          }
+        },
+        {
+          "slot_id": "body_bullet",
+          "layout": {
+            "rect": [96, 340, 900, 500],
+            "align": "left"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 32,
+            "weight": 600,
+            "color": "#ffffff"
+          },
+          "layer": 10,
+          "list": [
+            "Khả năng tái sử dụng module",
+            "Idempotent render + retry",
+            "Chuẩn hoá kiểu chữ & lề an toàn"
+          ]
+        },
+        {
+          "slot_id": "progress_ui",
+          "layout": {
+            "rect": [1464, 96, 360, 80],
+            "align": "right"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 24,
+            "weight": 700,
+            "color": "#ffffff"
+          },
+          "layer": 20,
+          "text": "Tiến độ 3/12 (25%)"
+        },
+        {
+          "slot_id": "timestamp",
+          "layout": {
+            "rect": [1624, 992, 200, 40],
+            "align": "right"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 20,
+            "weight": 700,
+            "color": "#ffffff"
+          },
+          "layer": 20,
+          "text": "00:00:00"
+        },
+        {
+          "slot_id": "captions",
+          "layout": {
+            "rect": [260, 932, 1400, 100],
+            "align": "center"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "weight": 700,
+            "color": "#ffffff",
+            "bg_color": "rgba(0,0,0,0.55)"
+          },
+          "layer": 20,
+          "text": ""
+        }
+      ],
+      "graphics": [
+        {
+          "src": "D:/ThienPV/code/demo/assets/diagram_etl.png",
+          "layout": {
+            "rect": [1240, 200, 540, 380],
+            "mode": "fit"
+          },
+          "layer": 5,
+          "caption": "Sơ đồ ETL (fit/contain, không crop)"
+        }
+      ],
+      "presenter": {
+        "src": "D:/ThienPV/code/demo/assets/presenterv1.mp4",
+        "shape": "circle",
+        "rect": [1480, 720, 320, 320],
+        "layer": 20
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    },
+    {
+      "id": "scene_03_lecture_left_graphic",
+      "type": "lecture_side",
+      "start": 11.0,
+      "duration": 8.0,
+      "background": {
+        "color": "#0d1117"
+      },
+      "slots": [
+        {
+          "slot_id": "heading_h1",
+          "layout": {
+            "rect": [640, 160, 1120, 140],
+            "align": "left"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 56,
+            "weight": 800,
+            "color": "#ffffff"
+          },
+          "layer": 10,
+          "text": "Pipeline E-Learning tự động"
+        },
+        {
+          "slot_id": "body_bullet",
+          "layout": {
+            "rect": [640, 340, 900, 500],
+            "align": "left"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 32,
+            "weight": 600,
+            "color": "#ffffff"
+          },
+          "layer": 10,
+          "list": [
+            "Text → Graphic → Scene",
+            "Agent assembly timeline",
+            "Xuất H.264 1080p30"
+          ]
+        },
+        {
+          "slot_id": "progress_ui",
+          "layout": {
+            "rect": [1464, 96, 360, 80],
+            "align": "right"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 24,
+            "weight": 700,
+            "color": "#ffffff"
+          },
+          "layer": 20,
+          "text": "Tiến độ 3/12 (25%)"
+        },
+        {
+          "slot_id": "timestamp",
+          "layout": {
+            "rect": [1624, 992, 200, 40],
+            "align": "right"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 20,
+            "weight": 700,
+            "color": "#ffffff"
+          },
+          "layer": 20,
+          "text": "00:00:00"
+        },
+        {
+          "slot_id": "captions",
+          "layout": {
+            "rect": [260, 932, 1400, 100],
+            "align": "center"
+          },
+          "style": {
+            "font": "Inter",
+            "size": 36,
+            "weight": 700,
+            "color": "#ffffff",
+            "bg_color": "rgba(0,0,0,0.55)"
+          },
+          "layer": 20,
+          "text": ""
+        }
+      ],
+      "graphics": [
+        {
+          "src": "D:/ThienPV/code/demo/assets/diagram_etl.png",
+          "layout": {
+            "rect": [96, 200, 500, 380],
+            "mode": "fit"
+          },
+          "layer": 5,
+          "caption": "Flow tổng quát"
+        }
+      ],
+      "presenter": {
+        "src": "D:/ThienPV/code/demo/assets/presenterv1.mp4",
+        "shape": "circle",
+        "rect": [1480, 720, 320, 320],
+        "layer": 20
+      },
+      "transition_out": {
+        "type": "cut"
+      }
+    }
+  ]
+}

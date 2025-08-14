@@ -1,0 +1,139 @@
+# ===================== #
+#  Python Cache/Build   #
+# ===================== #
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+.installed.cfg
+
+# ===================== #
+#  Virtual Environments #
+# ===================== #
+venv/
+ENV/
+env/
+.venv/
+
+# ===================== #
+#  Packaging / Install  #
+# ===================== #
+.Python
+develop-eggs/
+downloads/
+parts/
+sdist/
+var/
+
+# ===================== #
+#  PyInstaller          #
+# ===================== #
+*.manifest
+*.spec
+
+# ===================== #
+#  Logs / Coverage      #
+# ===================== #
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ===================== #
+#  Databases            #
+# ===================== #
+db.sqlite3
+db.sqlite3-journal
+*.db
+
+# ===================== #
+#  Project Specific     #
+# ===================== #
+data/
+.trash
+.env
+.env.*
+*.pkl
+*.joblib
+*.ckpt
+*.h5
+*.pt
+*.pth
+outputs/
+logs/
+checkpoints/
+models/
+tmp/
+temp/
+
+# ===================== #
+#  Media Files          #
+# ===================== #
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.tiff
+*.bmp
+*.webp
+*.svg
+
+# Videos
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.flv
+*.mkv
+*.webm
+*.mts
+*.m2ts
+
+# Audio
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+*.m4a
+
+# Generated media folders
+media/
+renders/
+videos/
+audios/
+frames/
+
+# ===================== #
+#  Editors / IDEs       #
+# ===================== #
+.vscode/
+.idea/
+
+# ===================== #
+#  Documentation        #
+# ===================== #
+docs/_build/
+
+# ===================== #
+#  OS Generated Files   #
+# ===================== #
+.DS_Store
+Thumbs.db

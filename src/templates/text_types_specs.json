@@ -1,0 +1,653 @@
+{
+  "meta": {
+    "version": "2.0.0",
+    "generated_at": "2025-08-08T00:00:00Z",
+    "canvas": {
+      "width": 1920,
+      "height": 1080,
+      "aspect": "16:9"
+    },
+    "safe_margins": {
+      "title_area": 0.05,
+      "action_area": 0.025
+    },
+    "fonts_recommended": {
+      "sans": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "units": "px"
+  },
+  "types": [
+    {
+      "id": "course_title",
+      "name": "Tiêu đề khoá/bài (Title)",
+      "usecases": [
+        "Opening title",
+        "Slide tiêu đề chương",
+        "Hero text trên thumbnail"
+      ],
+      "size": {
+        "min": 72,
+        "max": 140,
+        "common": 96,
+        "weight": 800
+      },
+      "example": "Python cho E-Learning: Tư duy hệ thống & MoviePy v2",
+      "layout": {
+        "primary": {
+          "rect": [96, 96, 1200, 220],
+          "align": "left",
+          "length": "long"
+        },
+        "alternate": {
+          "rect": [260, 120, 1400, 240],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "subtitle",
+      "name": "Phụ đề/Tagline",
+      "usecases": [
+        "Mở đầu bên dưới Title",
+        "Tagline nhấn mạnh lợi ích"
+      ],
+      "size": {
+        "min": 48,
+        "max": 80,
+        "common": 60,
+        "weight": 700
+      },
+      "example": "Xây dựng pipeline đa tác tử cho tạo video tự động",
+      "layout": {
+        "primary": {
+          "rect": [96, 332, 1200, 140],
+          "align": "left",
+          "length": "long"
+        },
+        "alternate": {
+          "rect": [260, 372, 1400, 160],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "lowerthird_name",
+      "name": "Lower-third: Tên giảng viên",
+      "usecases": [
+        "Giới thiệu người nói",
+        "Xuất hiện khi chuyển cảnh"
+      ],
+      "size": {
+        "min": 44,
+        "max": 64,
+        "common": 52,
+        "weight": 800
+      },
+      "example": "Nguyễn Minh – Chuyên gia Python",
+      "layout": {
+        "primary": {
+          "rect": [96, 912, 720, 120],
+          "align": "left",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [1104, 912, 720, 120],
+          "align": "right",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "section_marker",
+      "name": "Nhãn phân đoạn / Chapter",
+      "usecases": [
+        "Đánh dấu chuyển chương",
+        "Overlay ngắn 2–3s"
+      ],
+      "size": {
+        "min": 64,
+        "max": 110,
+        "common": 80,
+        "weight": 800
+      },
+      "example": "Chương 2 · Kiến trúc đa tác tử",
+      "layout": {
+        "primary": {
+          "rect": [96, 140, 1728, 140],
+          "align": "center",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [96, 470, 1728, 140],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "heading_h1",
+      "name": "Heading H1",
+      "usecases": [
+        "Tiêu đề slide nội dung",
+        "Mục lớn trong video"
+      ],
+      "size": {
+        "min": 52,
+        "max": 88,
+        "common": 64,
+        "weight": 800
+      },
+      "example": "Kiến trúc tổng thể hệ thống",
+      "layout": {
+        "primary": {
+          "rect": [96, 220, 1200, 160],
+          "align": "left",
+          "length": "long"
+        },
+        "alternate": {
+          "rect": [260, 240, 1400, 160],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "heading_h2",
+      "name": "Heading H2",
+      "usecases": [
+        "Tiêu đề phần phụ",
+        "Container cho bullets"
+      ],
+      "size": {
+        "min": 40,
+        "max": 64,
+        "common": 48,
+        "weight": 700
+      },
+      "example": "Luồng dữ liệu & hàng đợi tác vụ",
+      "layout": {
+        "primary": {
+          "rect": [96, 360, 1200, 120],
+          "align": "left",
+          "length": "medium"
+        },
+        "alternate": {
+          "rect": [1040, 360, 784, 120],
+          "align": "left",
+          "length": "medium"
+        }
+      }
+    },
+    {
+      "id": "heading_h3",
+      "name": "Heading H3",
+      "usecases": [
+        "Tiêu đề mục nhỏ",
+        "Nhấn mạnh ý phụ"
+      ],
+      "size": {
+        "min": 32,
+        "max": 48,
+        "common": 40,
+        "weight": 700
+      },
+      "example": "Tối ưu hoá I/O và caching",
+      "layout": {
+        "primary": {
+          "rect": [96, 460, 1100, 100],
+          "align": "left",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [1040, 500, 784, 100],
+          "align": "left",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "body_bullet",
+      "name": "Nội dung chính / Bullet",
+      "usecases": [
+        "Đoạn văn ngắn",
+        "Gạch đầu dòng key takeaways"
+      ],
+      "size": {
+        "min": 28,
+        "max": 40,
+        "common": 34,
+        "weight": 600
+      },
+      "examples": [
+        "Khả năng tái sử dụng module",
+        "Idempotent render + retry",
+        "Chuẩn hoá kiểu chữ & lề an toàn"
+      ],
+      "layout": {
+        "primary": {
+          "rect": [96, 540, 900, 480],
+          "align": "left",
+          "length": "long"
+        },
+        "alternate": {
+          "rect": [260, 520, 1400, 460],
+          "align": "left",
+          "length": "medium"
+        }
+      }
+    },
+    {
+      "id": "definition_term",
+      "name": "Thuật ngữ / Định nghĩa",
+      "usecases": [
+        "Giải thích khái niệm",
+        "Glossary xuất hiện cạnh ví dụ"
+      ],
+      "size": {
+        "min": 40,
+        "max": 64,
+        "common": 48,
+        "weight": 800
+      },
+      "example": "Idempotent: Thao tác lặp lại nhiều lần cho cùng kết quả",
+      "layout": {
+        "primary": {
+          "rect": [96, 360, 800, 220],
+          "align": "left",
+          "length": "medium"
+        },
+        "alternate": {
+          "rect": [1040, 320, 784, 240],
+          "align": "left",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "step_label",
+      "name": "Nhãn bước (Step)",
+      "usecases": [
+        "Hướng dẫn thao tác",
+        "Demo quy trình"
+      ],
+      "size": {
+        "min": 36,
+        "max": 56,
+        "common": 44,
+        "weight": 800
+      },
+      "example": "Bước 1 · Chuẩn bị dữ liệu",
+      "layout": {
+        "primary": {
+          "rect": [96, 96, 600, 80],
+          "align": "left",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [760, 96, 400, 80],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "code_snippet",
+      "name": "Mã nguồn / Code snippet",
+      "usecases": [
+        "Trình diễn mã",
+        "CLI/Terminal lệnh"
+      ],
+      "size": {
+        "min": 26,
+        "max": 36,
+        "common": 30,
+        "mono": true
+      },
+      "example": "from moviepy.editor import TextClip\nclip = TextClip(\"Hello 1080p\", font_size=64, font=\"Inter\")",
+      "layout": {
+        "primary": {
+          "rect": [96, 280, 1100, 700],
+          "align": "left",
+          "length": "long"
+        },
+        "alternate": {
+          "rect": [260, 360, 1400, 560],
+          "align": "left",
+          "length": "medium"
+        }
+      }
+    },
+    {
+      "id": "equation",
+      "name": "Công thức / Phương trình",
+      "usecases": [
+        "Toán/Âm thanh/Thống kê",
+        "Hiển thị công thức rời"
+      ],
+      "size": {
+        "min": 36,
+        "max": 64,
+        "common": 48,
+        "mono": true
+      },
+      "example": "SNR = 10 · log10( P_signal / P_noise )",
+      "layout": {
+        "primary": {
+          "rect": [96, 420, 1728, 240],
+          "align": "center",
+          "length": "medium"
+        },
+        "alternate": {
+          "rect": [260, 300, 1400, 200],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "chart_labels",
+      "name": "Nhãn trục biểu đồ",
+      "usecases": [
+        "Trục X/Y",
+        "Tiêu đề cột/bảng"
+      ],
+      "size": {
+        "min": 22,
+        "max": 32,
+        "common": 28,
+        "weight": 700
+      },
+      "example": "Accuracy (%)",
+      "layout": {
+        "primary": {
+          "rect": [1040, 900, 784, 60],
+          "align": "center",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [980, 520, 60, 40],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "data_labels",
+      "name": "Nhãn dữ liệu / Legend",
+      "usecases": [
+        "Legend biểu đồ",
+        "Số liệu trên điểm dữ liệu"
+      ],
+      "size": {
+        "min": 20,
+        "max": 30,
+        "common": 24,
+        "weight": 600
+      },
+      "example": "Baseline / Ours",
+      "layout": {
+        "primary": {
+          "rect": [1060, 240, 500, 80],
+          "align": "left",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [1040, 860, 784, 40],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "captions",
+      "name": "Phụ đề (Closed Captions)",
+      "usecases": [
+        "Song ngữ",
+        "Truy cập cho người khiếm thính"
+      ],
+      "size": {
+        "min": 36,
+        "max": 48,
+        "common": 42,
+        "weight": 700
+      },
+      "example": "[nhạc nhẹ] Hệ thống đa tác tử giúp tự động hoá biên tập…",
+      "layout": {
+        "primary": {
+          "rect": [260, 932, 1400, 100],
+          "align": "center",
+          "length": "long"
+        },
+        "alternate": {
+          "rect": [260, 872, 1400, 100],
+          "align": "center",
+          "length": "long"
+        }
+      }
+    },
+    {
+      "id": "speaker_label",
+      "name": "Nhãn người nói trong phụ đề",
+      "usecases": [
+        "Phân biệt nhiều người nói",
+        "Phỏng vấn/đối thoại"
+      ],
+      "size": {
+        "min": 28,
+        "max": 36,
+        "common": 32,
+        "weight": 700
+      },
+      "example": "(Giảng viên): Mời bạn mở VS Code…",
+      "layout": {
+        "primary": {
+          "rect": [260, 872, 1400, 60],
+          "align": "center",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [260, 932, 1400, 60],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "quiz_question",
+      "name": "Quiz: Câu hỏi",
+      "usecases": [
+        "Đánh giá giữa bài",
+        "Ôn tập cuối chương"
+      ],
+      "size": {
+        "min": 44,
+        "max": 64,
+        "common": 52,
+        "weight": 800
+      },
+      "example": "MoviePy v2 khác gì v1 ở API TextClip?",
+      "layout": {
+        "primary": {
+          "rect": [96, 200, 1728, 180],
+          "align": "center",
+          "length": "medium"
+        },
+        "alternate": {
+          "rect": [96, 220, 1200, 200],
+          "align": "left",
+          "length": "long"
+        }
+      }
+    },
+    {
+      "id": "quiz_choices",
+      "name": "Quiz: Lựa chọn A/B/C/D",
+      "usecases": [
+        "Trắc nghiệm",
+        "Khảo sát nhanh"
+      ],
+      "size": {
+        "min": 32,
+        "max": 42,
+        "common": 36,
+        "weight": 600
+      },
+      "examples": [
+        "A) Hỗ trợ async render",
+        "B) Thay đổi tham số fontsize → font_size",
+        "C) Bổ sung phương thức .with_duration",
+        "D) Tất cả đáp án"
+      ],
+      "layout": {
+        "primary": {
+          "rect": [96, 400, 1728, 400],
+          "align": "left",
+          "length": "medium"
+        },
+        "alternate": {
+          "rect": [96, 400, 840, 360],
+          "align": "left",
+          "length": "medium"
+        }
+      }
+    },
+    {
+      "id": "quiz_feedback",
+      "name": "Quiz: Phản hồi đúng/sai",
+      "usecases": [
+        "Phản hồi sau khi chọn",
+        "Giải thích đáp án"
+      ],
+      "size": {
+        "min": 36,
+        "max": 52,
+        "common": 44,
+        "weight": 800
+      },
+      "example": "Chính xác! MoviePy v2 đổi fontsize → font_size.",
+      "layout": {
+        "primary": {
+          "rect": [480, 450, 960, 180],
+          "align": "center",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [1040, 240, 784, 160],
+          "align": "left",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "cta",
+      "name": "CTA / Lời kêu gọi",
+      "usecases": [
+        "Kêu gọi hành động",
+        "Chuyển trang/bài"
+      ],
+      "size": {
+        "min": 32,
+        "max": 44,
+        "common": 38,
+        "weight": 800
+      },
+      "example": "Tham gia bài tập thực hành ngay",
+      "layout": {
+        "primary": {
+          "rect": [710, 840, 500, 80],
+          "align": "center",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [1364, 840, 460, 80],
+          "align": "center",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "progress_ui",
+      "name": "Tiến độ & microcopy UI",
+      "usecases": [
+        "Góc phải trên",
+        "Overlay mờ"
+      ],
+      "size": {
+        "min": 20,
+        "max": 28,
+        "common": 24,
+        "weight": 700
+      },
+      "example": "Tiến độ 3/12 (25%)",
+      "layout": {
+        "primary": {
+          "rect": [1464, 96, 360, 80],
+          "align": "right",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [96, 96, 360, 60],
+          "align": "left",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "timestamp",
+      "name": "Timestamp / Watermark",
+      "usecases": [
+        "Đồng hồ góc video",
+        "Đóng dấu logo/text"
+      ],
+      "size": {
+        "min": 18,
+        "max": 24,
+        "common": 20,
+        "weight": 700
+      },
+      "example": "00:05:32",
+      "layout": {
+        "primary": {
+          "rect": [96, 992, 200, 40],
+          "align": "left",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [1624, 992, 200, 40],
+          "align": "right",
+          "length": "short"
+        }
+      }
+    },
+    {
+      "id": "legal_credits",
+      "name": "Pháp lý / Credit cuối",
+      "usecases": [
+        "Credit cuối video",
+        "Chú ý bản quyền"
+      ],
+      "size": {
+        "min": 20,
+        "max": 28,
+        "common": 22,
+        "weight": 600
+      },
+      "example": "© 2025 VideoGen. Tư liệu minh hoạ có giấy phép CC-BY 4.0",
+      "layout": {
+        "primary": {
+          "rect": [410, 1000, 1100, 32],
+          "align": "center",
+          "length": "short"
+        },
+        "alternate": {
+          "rect": [96, 984, 1728, 48],
+          "align": "center",
+          "length": "medium"
+        }
+      }
+    }
+  ]
+}
