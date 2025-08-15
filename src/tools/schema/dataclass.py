@@ -1,14 +1,18 @@
 from dataclasses import dataclass, field
-from typing import Optional, Tuple, Union
+from typing import Optional, Tuple, Union, NamedTuple
 from moviepy import VideoClip
 from dataclasses import dataclass
 from typing import Literal, Optional, Tuple,List, Union
 
 
 # Type aliases
-Rect = Tuple[int, int, int, int]  # (x, y, width, height)
+# Rect = Tuple[int, int, int, int]  # (x, y, width, height)
 Payload = Union[str, VideoClip]   # Either raw text or a video clip
-
+class Rect(NamedTuple):
+    x: int
+    y: int
+    w: int
+    h: int
 @dataclass
 class Fonts:
     """
@@ -36,8 +40,8 @@ class Style:
 class Meta:
     """Thông tin chung."""
     version:str = "1.0.0"
-    width: int
-    height: int
+    width: int = 1080
+    height: int = 1920
     title_area: float = 0.05   # 5% mỗi cạnh
     action_area: float = 0.025 # 2.5% mỗi cạnh
     font_type: Literal["sans", "mono"] = "sans" 
